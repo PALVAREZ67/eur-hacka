@@ -1,39 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layout.html.twig' %}
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Heracles Labours #5</title>
-		<link rel="stylesheet" href="../../../public/assets/css/Game.css">
-	</head>
+{%  block title %}Christmas Battle
+{% endblock %}
 
-	<body>
-		<header>
-			<h1>Heracles vs Ceryneian Hind</h1>
-			<a class="btn reset" href="?reset=reset">Reset</a>
-		</header>
-		<main>
-			<div class="error"><?= $error ?? ''; ?></div>
-			<div class="fighters">
-				<a href="#hero">
-					<div class="fighter">
-						<figure class="heracles">
-							<img src="<?= $arena->getHero()->getImage() ?>" alt="heracles">
-							<figcaption><?= $arena->getHero()->getName() ?></figcaption>
-						</figure>
-						<progress class="life" max="100" value="<?= $arena->getHero()->getLife() ?>"></progress>
+{% block content %}
+	<div classe="game">
+		<div class="card_game1">
+			<div class="uk-card uk-card-default uk-width-1-2@m">
+				<div class="uk-card-header">
+					<div class="uk-grid-small uk-flex-middle" uk-grid>
+						<div class="uk-width-auto">
+							<img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg" alt="Avatar">
+						</div>
+						<div class="uk-width-expand">
+							<h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+							<p class="uk-text-meta uk-margin-remove-top">
+								<time datetime="2016-04-01T19:00">April 01, 2016</time>
+							</p>
+						</div>
+					</div>
 				</div>
-			</a>
-			<?php foreach ($arena->getMonsters() as $monster) : ?>
-			<div class="fighter">
-				<figure class="monster">
-					<img src="<?= $monster->getImage() ?>" alt="monster">
-					<figcaption><?= $monster->getName() . '(' . $monster->getLife() . ')' ?></figcaption>
-				</figure>
-				<progress class="life" max="100" value="<?= $monster->getLife() ?>"></progress>
+				<div class="uk-card-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+				<div class="uk-card-footer">
+					<a href="#" class="uk-button uk-button-text">Read more</a>
+				</div>
+			</div>
 		</div>
-		<?php endforeach; ?></body>
+		<div classe="card_game2">
+			<div class="uk-card uk-card-default uk-width-1-2@m">
+				<div class="uk-card-header">
+					<div class="uk-grid-small uk-flex-middle" uk-grid>
+						<div class="uk-width-auto">
+							<img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg" alt="Avatar">
+						</div>
+						<div class="uk-width-expand">
+							<h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+							<p class="uk-text-meta uk-margin-remove-top">
+								<time datetime="2016-04-01T19:00">April 01, 2016</time>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="uk-card-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+				<div class="uk-card-footer">
+					<a href="#" class="uk-button uk-button-text">Read more</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-</html></div><?php include 'map.php' ?></main><?php include 'inventory.php' ?><script src="../../../public/assets/js/move.js"></script></body></html>
+	{{ dump(name) }}
+
+{% endblock %}
