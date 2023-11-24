@@ -9,18 +9,18 @@
 
 {% block content %}
 	<div class="body">
-		<div classe="uk-container uk-container-expand lw-div-accueil">
+		<div classe="uk-container uk-container-expand">
 			<h1 class="uk-heading-small">Christmas Clash !</h1>
 		</div>
 
 		<div class="uk-container">
 			<p class="uk-text-large lw-text-large">Vous détestez l'esprit de Noël? Vous avez passé une mauvaise année? 
-			Vos enfants vous rendent dingues? Vous n'en pouvez plus de vos voisins ou de vos beaux-parents? Votre mari 
-			ou votre femme est insupportable? Ou tout simplement vous en avez marre de cette ambiance édulcorée de Noël?
-			<br><br>
-			Alors vous êtes au bon endroit!
-			<br><br>
-			Venez vous défoulez lors d'un combat pour tuer l'esprit de Noël!</p>
+																							Vos enfants vous rendent dingues? Vous n'en pouvez plus de vos voisins ou de vos beaux-parents? Votre mari 
+																							ou votre femme est insupportable? Ou tout simplement vous en avez marre de cette ambiance édulcorée de Noël?
+				<br><br>
+				Alors vous êtes au bon endroit!
+				<br><br>
+				Venez vous défoulez lors d'un combat pour tuer l'esprit de Noël!</p>
 		</div>
 		<!-- Swiper -->
 		<div class="swiper">
@@ -37,13 +37,14 @@
 			<div class="swiper-button"></div>
 			<div class="swiper-button"></div>
 		</div>
-
+		{% include 'Home/accueil/_pseudo.html.twig' %}
 
 		<div class="uk-container button-connexion">
 			<a href='/transition'>
-				<button class="uk-button-large">Connexion</button>
+				<button class="uk-button-large">Let's Go!</button>
 			</a>
 		</div>
+
 	</div>
 {% endblock %}
 
